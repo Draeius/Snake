@@ -1,11 +1,16 @@
 public class Main {
 
     public static void main(String[] args) {
-        try {
-            Snake snake = new Snake(10, 10, 5);
-            System.out.println(snake);
-        } catch (NoValidDirectionException e) {
-            System.out.println("Snake too long");
-        }
+        //DebugLogger.DEBUG = true;
+        //DebugLogger.PRINT_NETWORK_FLAG = true;
+        Network network = new Network(new int[] { 3, 4 });
+        System.out.println("Prediction: " + network.predictDirection(new InputInterface() {
+
+            @Override
+            public double[] getInputVector() {
+                return new double[] { 1,2,3 };
+            }
+
+        }));
     }
 }
