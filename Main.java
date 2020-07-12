@@ -1,16 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        //DebugLogger.DEBUG = true;
-        //DebugLogger.PRINT_NETWORK_FLAG = true;
-        Network network = new Network(new int[] { 3, 4 });
-        System.out.println("Prediction: " + network.predictDirection(new InputInterface() {
-
-            @Override
-            public double[] getInputVector() {
-                return new double[] { 1,2,3 };
-            }
-
-        }));
+        // DebugLogger.DEBUG = true;
+        DebugLogger.PRINT_NETWORK_FLAG = true;
+        Matrix m = new Matrix(new int[] { 3, 2, 3 });
+        System.out.println(m);
+        m.removeNode(1);
+        System.out.println(m);
     }
 }

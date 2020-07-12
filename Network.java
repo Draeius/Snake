@@ -5,9 +5,9 @@ public class Network {
      * matrix is organized as double[layer][node][weight] the first weight is always
      * for the bias
      */
-    double[][][] matrix;
+    private double[][][] matrix;
 
-    ActivationFunction activationFunction;
+    private ActivationFunction activationFunction;
 
     public Network(int[] sizes) {
         this(sizes, ActivationFunction.SIGMOID);
@@ -110,6 +110,14 @@ public class Network {
             return null;
         }
         return matrix[layer][node];
+    }
+
+    public double[][][] getMatrix(){
+        return matrix;
+    }
+
+    public ActivationFunction getActivationFunction(){
+        return activationFunction;
     }
 
     public String toString() {
