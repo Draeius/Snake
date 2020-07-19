@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Vector;
 
+//TODO: enable snake to grow
+//TODO: move walls into the map and stop using map boundaries as walls to enable the use of obstacles inside the map
 public class Snake {
 
     private Element[][] map;

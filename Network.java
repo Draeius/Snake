@@ -4,6 +4,7 @@ public class Network {
     /**
      * matrix is organized as double[layer][node][weight] the first weight is always
      * for the bias
+     * TODO: replace with matrix
      */
     private double[][][] matrix;
 
